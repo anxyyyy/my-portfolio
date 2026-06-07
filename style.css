@@ -1,0 +1,78 @@
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+    background: #27272A;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #3F3F46;
+}
+
+/* Base custom styles */
+html {
+    scroll-behavior: smooth;
+    background-color: #0A0A0A;
+}
+
+/* 3D Tilt Card Effects */
+.tilt-container {
+    perspective: 1000px;
+}
+
+.tilt-card {
+    transition: transform 0.1s ease-out, box-shadow 0.2s ease;
+    transform-style: preserve-3d;
+}
+
+.tilt-inner {
+    transform: translateZ(50px);
+}
+
+/* Glassmorphism Classes */
+.glass {
+    background: rgba(18, 18, 18, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-nav {
+    background: rgba(10, 10, 10, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Active transitions */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom glowing effects */
+.glow-accent {
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.15);
+}
+
+.glow-accent-hover:hover {
+    box-shadow: 0 0 35px rgba(139, 92, 246, 0.3);
+}
+
+/* Custom Tooltip styles */
+.tooltip-trigger:hover .tooltip-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
